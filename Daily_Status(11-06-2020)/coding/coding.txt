@@ -1,0 +1,31 @@
+1.Write a python function that converts a string to all uppercase, provided it contains at least 2 uppercase characters in the first 4 characters. Else print the string as it is
+
+
+def to_uppercase(str1):
+    num_upper = 0
+    for letter in str1[:4]: 
+        if letter.upper() == letter:
+            num_upper += 1
+    if num_upper >= 2:
+        return str1.upper()
+    return str1
+
+print(to_uppercase('Python'))
+print(to_uppercase('PyThon'))
+
+2.Python Program to find the average of all Items in a Dictionary Step1: Get the name as key and marks as value for n students Step2: find the average of the marks of all the students and print it
+
+
+
+
+from statistics import mean
+
+StudentGrades = {
+    'Ivan': [4.32, 3, 2],
+    'Martin': [3.45, 5, 6],
+    'Stoyan': [2, 5.67, 4],
+    'Vladimir': [5.63, 4.67, 6]
+}
+
+for st,vals in StudentGrades.items():
+    print("Average for {} is {}".format(st,mean(vals)))
