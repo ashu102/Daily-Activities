@@ -1,0 +1,55 @@
+1. Write a Java Program to find area of Square, Rectangle and Circle using Method Overloading
+class OverloadDemo
+{
+void area(float x)
+    {
+        System.out.println("the area of the square is "+Math.pow(x, 2)+" sq units");
+    }
+    void area(float x, float y)
+    {
+        System.out.println("the area of the rectangle is "+x*y+" sq units");
+    }
+    void area(double x)
+    {
+        double z = 3.14 * x * x;
+        System.out.println("the area of the circle is "+z+" sq units");
+    }
+}
+public class Overload 
+{
+     public static void main(String args[]) 
+	{
+	   OverloadDemo ob = new OverloadDemo();
+	   ob.area(5);
+	   ob.area(11,12);
+	   ob.area(2.5);
+        }
+}
+
+
+2. Write a C Program to rotate an array by K positions.
+#include <stdio.h>
+int main() {
+   int arr[100];
+   int i, N, len, j;
+   printf("enter n value\n");
+   scanf("%d",&len);
+   printf("enter array elements\n");
+   for(i=0;i<len;i++)
+   scanf("%d",&arr[i]);
+   printf("enter num rotation \n");
+   scanf("%d",&N);
+   int temp=0;
+   for (i = 0; i < N; i++) {
+      int x = arr[0];
+      for (j = 0; j < len; j++) {
+         temp=arr[j];
+         arr[j] = arr[j + 1];
+         arr[j+1]=temp;
+      }
+      arr[len - 1] = x;
+   }
+   for (i = 0; i < len; i++) {
+     printf("element at %d index : %d\n",i,arr[i]);
+   }
+}
