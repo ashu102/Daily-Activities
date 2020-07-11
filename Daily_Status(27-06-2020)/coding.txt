@@ -1,0 +1,14 @@
+
+1. Python Program to Find the Area of a Rectangle Using Classes
+class  rectangle():
+    def __init__(self,b,l):
+        self.b=b
+        self.l=l
+    def area(self):
+        return self.b*self.l
+x=int(input("Enter length of rectangle: "))
+y=int(input("Enter breadth of rectangle: "))
+obj=rectangle(x,y)
+print("Area of rectangle:",obj.area())
+print()
+
